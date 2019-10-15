@@ -69,17 +69,17 @@ function fnVolume() {
   // Way 3 (Refactor)
   // En nuestro caso, se puede eliminar el último if
 
-  if (audio.volume == 0.5)
+  if (audio.volume === 0.5)
     changeVolume(1, 'up');
-  else if (audio.volume == 1)
+  else if (audio.volume === 1)
     changeVolume(0, 'mute');
-  else if (audio.volume == 0)
+  else if (audio.volume === 0)
     changeVolume(0.5, 'down');
 
 }
 
 function fnReplay() {
-  auto.loop = fnPlay();
+  audio.loop = fnPlay();
 }
 
 
@@ -98,3 +98,4 @@ buttons.prev.addEventListener('click', fnPrev);
 buttons.next.addEventListener('click', fnNext);
 buttons.stop.addEventListener('click', fnStop);
 buttons.volume.addEventListener('click', fnVolume);
+buttons.vrepay.addEventListener('click', fnReplay);
