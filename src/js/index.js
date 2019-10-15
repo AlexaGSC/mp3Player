@@ -78,6 +78,10 @@ function fnVolume() {
 
 }
 
+function fnReplay() {
+  auto.loop = fnPlay();
+}
+
 
 function putText() {
   const nameSong = songs[currentSong];
